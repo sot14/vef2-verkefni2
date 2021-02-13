@@ -64,6 +64,10 @@ hr {
     text-align: center;
 }
 
+.signature-list {
+    margin: auto;
+}
+
 form input {
     width: 85%;
     height: 2em;
