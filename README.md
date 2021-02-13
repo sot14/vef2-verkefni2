@@ -2,8 +2,8 @@
 
 # Keyrsla
 
-`` npm install
+``` npm install
 npm run setup
 npm test
 npm start
-``
+```
