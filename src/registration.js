@@ -129,10 +129,8 @@ async function showErrors(req, res, next) {
     };
   
     const validation = validationResult(req);
-    console.log("valdiation", validation);
   
     if (!validation.isEmpty()) {
-        console.log("halaloi er inni validaitioan");
       const errors = validation.array();
       data.errors = errors;
       data.errorsTitle = 'Villur við undirskrift';

@@ -15,7 +15,6 @@ function formatSignature(signature) {
 
 function formatDate(date) {
     const newDate = new Date(date);
-    console.log(newDate);
     let day = newDate.getDate();
     let month = newDate.getMonth()+1;
     let year = newDate.getFullYear();
