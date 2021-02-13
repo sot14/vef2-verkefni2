@@ -8,3 +8,5 @@ npm run setup
 npm test
 npm start
 ```
+
+Heroku link: https://verkefni-2.herokuapp.com/
