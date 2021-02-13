@@ -10,18 +10,19 @@
     "xss": "^1.0.8"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
     "browser-sync": "^2.26.14",
     "concurrently": "^5.3.0",
     "node-sass": "^5.0.0",
-    "stylelint": "^13.9.0"
+    "nodemon": "^2.0.7",
+    "stylelint": "^13.9.0",
+    "stylelint-config-standard": "^20.0.0"
   },
   "scripts": {
     "start": "node ./src/app.js",
     "setup": "node ./src/setup.js",
     "test": "concurrently \"npm:eslint\" \"npm:stylelint\"",
-    "eslint": "eslint *.js",
-    "stylelint": "stylelint **/*.scss",
+    "eslint": "eslint **/*.js",
+    "stylelint": "stylelint **/*.css",
     "browser-sync": "browser-sync start --server",
     "dev": "concurrently \"nodemon ./src/app.js\"",
     "sass": "node-sass ./public/styles.scss ./public/styles.css",

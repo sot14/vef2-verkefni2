@@ -20,6 +20,7 @@ async function query(q) {
 
     const { rows } = result;
     return rows;
+  // eslint-disable-next-line no-useless-catch
   } catch (err) {
     throw err;
   } finally {

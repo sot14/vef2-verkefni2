@@ -1,93 +1,100 @@
 html {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    background-color: #fffde6;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background-color: #fffde6;
 }
 
 .title h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .signature-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 1000px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1000px;
+  margin: auto;
 }
 
 .registration-form {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .isAnonymous {
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    margin: 4em 20em 0 20em;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  margin: 4em 20em 0 20em;
 }
 
 #anonymous {
-    width: 5%;
-    margin-right: 1em;
+  width: 5%;
+  margin-right: 1em;
 }
 
 #comment {
-    height: 5em;
+  height: 5em;
 }
+
 .submit {
-    margin-top: 2em;
-    display: flex;
-    justify-content: center;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
 }
+
 .submit-btn {
-    width: 10em;
-    font-size: 2em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: 1px solid lightgrey;
-    background-color: white;
+  width: 10em;
+  font-size: 2em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background-color: white;
 }
 
 .submit-btn:hover {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 hr {
-    color: #333;
-    width: 100%;
-    border-style: dotted;
+  color: #333;
+  width: 100%;
+  border-style: dotted;
 }
 
-.title, .title2 {
-    margin: auto;
-    text-align: center;
+.title,
+.title2 {
+  margin: auto;
+  text-align: center;
 }
 
 .signature-list {
-    margin: auto;
+  margin: auto;
 }
 
 form input {
-    width: 85%;
-    height: 2em;
-    float: right;
-    margin-top: -0.5em;
+  width: 85%;
+  height: 2em;
+  float: right;
+  margin-top: -0.5em;
 }
 
 .form-row {
-    padding: 1em;
+  padding: 1em;
 }
 
-table, tr, td, th {
-    border: 1px solid #333;
-    border-collapse: collapse;
+table,
+tr,
+td,
+th {
+  border: 1px solid #333;
+  border-collapse: collapse;
 }
 
-td, th {
-    padding: 0.5em;
+td,
+th {
+  padding: 0.5em;
 }
 
 thead {
-    text-align: center;
+  text-align: center;
 }
