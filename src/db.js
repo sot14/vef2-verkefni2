@@ -13,6 +13,8 @@ if (!connectionString) {
   process.exit(1);
 }
 
+const ssl = nodeEnv !== 'development' ? { rejectUnauthorized: false } : false;
+
 const pool = new pg.Pool({ connectionString });
 
 pool.on('error', (err) => {
