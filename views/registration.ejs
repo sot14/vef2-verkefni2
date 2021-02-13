@@ -1,0 +1,89 @@
+<%- include('header') -%>
+<body>
+    <div class="signature-page">
+        <div class="title">
+            <h1><%= data.title %></h1>
+        </div>
+        
+  <div class="registration-form">
+    <form
+      method="post"
+      action="/"
+      
+    >
+      <div class="form-row">
+        <label for="name">Nafn*</label>
+        <input type="text" name="name" value="<%= data.name %>" id="name" />
+      </div>
+      <div class="form-row">
+        <label for="nationalId">Kennitala*</label>
+        <input
+          type="text"
+          pattern="^[0-9]{6}-?[0-9]{4}$"
+          id="nationalId"
+          name="nationalId"
+          placeholder="000000-0000"
+          value="<%= data.nationalId %>"
+          required
+        />
+      </div>
+
+      <div class="form-row">
+        <label for="comment">Athugasemd</label>
+        <input id="comment" type="textarea" rows="4" name="comment" value="<%= data.comment %>"/>
+      </div>
+      <div class="isAnonymous">
+        <input type="checkbox" id="anonymous" name="anonymous" value="<%= data.anonymous %>" />
+        <label for="anonymous">Ekki birta nafn á lista</label>
+      </div>
+
+      <% if (data.errors) { %>
+      <h2><%= data.errorsTitle %></h2>
+      <ul class="errors">
+        <% data.errors.forEach((error) => { %>
+        <li class="error">
+          <label for="<%= error.param %>"><%= error.msg %></label>
+        </li>
+        <% }); %>
+      </ul>
+      <% } %>
+      <div class="submit">
+          <button class="submit-btn">Skrifa undir</button>
+      </div>
+      
+    </form>
+  </div>
+  <hr>
+  <div class="signature-section">
+      <div class="title2">
+          <h1>Undirskriftir</h1>
+      </div>
+    <table class="signature-list">
+        <tbody>
+            <thead>
+                <tr>
+              
+            <th><strong>Dags</strong></th>
+            <th><strong>Nafn</strong></th>
+            <th><strong>Athugasemd</strong></th>
+          </tr>
+            </thead>
+          
+    
+          <% data.signatureList.forEach((signature) => { %> 
+          <% signature = locals.anonymousSignature(signature) %>
+          <tr class="signature-row">
+            <td><%= locals.dateFormatter(signature.signed) %></td>
+            <td><%= signature.name %></td>
+            <td><%= signature.comment %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </body>
+    
+  </div>
+  
+    </div>
+  
+  
